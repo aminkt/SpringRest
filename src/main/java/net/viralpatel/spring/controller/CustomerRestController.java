@@ -2,6 +2,7 @@ package net.viralpatel.spring.controller;
 
 import java.util.List;
 
+import git.aminkt.hello.Hello;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,9 +25,14 @@ public class CustomerRestController {
     private CustomerDAO customerDAO;
 
 
-    @GetMapping("/customers")
+    @GetMapping("/")
     public List getCustomers() {
         return customerDAO.list();
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity getTest() {
+        return new ResponseEntity(Hello.sayHello(), HttpStatus.OK);
     }
 
     @GetMapping("/customers/{id}")

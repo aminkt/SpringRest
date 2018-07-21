@@ -2,6 +2,9 @@ package net.viralpatel.spring.model;
 
 import java.util.Date;
 
+/**
+ *
+ */
 public class Customer {
 
     private Long id;
@@ -11,6 +14,14 @@ public class Customer {
     private String mobile;
     private Date dateOfBirth;
 
+    /**
+     *
+     * @param id    id of customer
+     * @param firstName name of customer
+     * @param lastName
+     * @param email
+     * @param mobile
+     */
     public Customer(long id, String firstName, String lastName, String email, String mobile) {
         this.id = id;
         this.firstName = firstName;
@@ -23,6 +34,10 @@ public class Customer {
     public Customer() {
     }
 
+    /**
+     *
+     * @return Long
+     */
     public Long getId() {
         return id;
     }
